@@ -1,0 +1,1 @@
+This repository demonstrates a common yet subtle bug encountered when using Tailwind CSS's `@apply` directive within an imported CSS file. The bug manifests as an `Unmatched selector` error, preventing the application of Tailwind classes. The solution involves restructuring the CSS import process and ensuring that Tailwind processes the `@apply` directive correctly.
