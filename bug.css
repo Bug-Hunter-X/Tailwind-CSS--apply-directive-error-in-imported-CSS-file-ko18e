@@ -1,0 +1,1 @@
+This error occurs when using Tailwind CSS's `@apply` directive within a CSS file that is imported into your main CSS file. The error message might appear as `Unmatched selector` or similar, but the root cause is an issue with how Tailwind processes the `@apply` directive when it's nested or included in an imported CSS file.
