@@ -1,0 +1,28 @@
+To solve this, avoid using `@apply` within imported CSS files. Instead, directly use the classes in your main CSS file or create a separate CSS file dedicated to Tailwind utility classes and import it before your main CSS file.  This ensures that Tailwind processes all `@apply` directives during its build process.
+
+For example:
+
+// main.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Tailwind utility classes file */
+@import './tailwind-utilities.css';
+
+/* Your main styles here */
+.my-component { /* No @apply here */
+  @apply bg-blue-500 text-white p-4;
+}
+
+
+// tailwind-utilities.css
+.my-utility-class {
+  /* ...Your Tailwind utility classes here... */
+}
+
+// Avoid this structure:
+// import './utils.css';
+// 
+//utils.css
+//@apply ... 
